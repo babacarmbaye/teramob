@@ -26,7 +26,8 @@ export default function DSCard() {
                 <Ionicons name="star" size={14} color="#FFC107" />
                 <Text style={styles.ratingText}>4.6</Text>
                 </View>
-                <Text style={styles.emoji}>🚗</Text>
+                {/* <Text style={styles.emoji}>🚗</Text> */}
+                <Ionicons name="car-sport" size={64} color="gray" />
             </View>
 
             {/* Content */}

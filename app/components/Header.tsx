@@ -1,3 +1,4 @@
+import { LinearGradient } from "expo-linear-gradient";
 import { useRef } from "react";
 import { Animated, StyleSheet, Text, View } from "react-native";
 
@@ -57,12 +58,14 @@ const CollapsibleHeaderScreen = () => {
 
 export default function Header() {
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={['#063b9f', '#440786']} style={styles.container}>
+    {/* <View style={styles.container}> */}
       <Text style={styles.title}>Teranga Mobility</Text>
       <Text style={styles.subtitle}>
         Cours de perfectionnement conduite
       </Text>
-    </View>
+    {/* </View> */}
+    </LinearGradient>
   );
 }
 
@@ -72,7 +75,7 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
     paddingLeft: 10,
     width: "100%",
-    backgroundColor: "#3B4BFF",
+    //backgroundColor: "#3B4BFF",
     color: "#fff",
     justifyContent: "center",
     alignItems: "center",

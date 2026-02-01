@@ -41,7 +41,7 @@ const LoginScreen: React.FC = () => {
   };
 
   return (
-    <LinearGradient colors={['#1e3c72', '#6a11cb']} style={styles.container}>
+    <LinearGradient colors={['#063b9f', '#440786']} style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
         <Ionicons name="car-sport" size={64} color="white" />
@@ -99,7 +99,7 @@ const LoginScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 16,
     justifyContent: 'center',
   },
   header: {
@@ -110,7 +110,6 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     color: 'white',
-    marginTop: 10,
   },
   subtitle: {
     fontSize: 14,

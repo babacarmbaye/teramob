@@ -20,7 +20,8 @@ export default function SchoolScreen() {
       {/* Image / Gradient zone */}
       <GradientTheme>
         <View style={styles.imageContainer}>
-          <Text style={styles.emoji}>🚗</Text>
+          {/* <Text style={styles.emoji}>🚗</Text> */}
+          <Ionicons name="car-sport" size={64} color="white" />
         </View>
       </GradientTheme>
 
