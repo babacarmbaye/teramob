@@ -1,4 +1,4 @@
-import DSCard from '@/components/DSCard';
+import DSCard from '@/app/components/DSCard';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList } from 'react-native';
 
@@ -35,13 +35,15 @@ export default function DynamicList() {
   }, []);
 
   return (
-    <FlatList
-      data={data}
-      keyExtractor={(_, index) => index.toString()}
-      renderItem={({ item }) => <DSCard />}
-      onEndReached={fetchData}
-      onEndReachedThreshold={0.5}
-      ListFooterComponent={loading ? <ActivityIndicator style={{ margin: 16 }} /> : null}
-    />
+    <>
+      <FlatList
+        data={data}
+        keyExtractor={(_, index) => index.toString()}
+        renderItem={({ item }) => <DSCard />}
+        onEndReached={fetchData}
+        onEndReachedThreshold={0.5}
+        ListFooterComponent={loading ? <ActivityIndicator style={{ margin: 16 }} /> : null}
+      />
+    </>
   );
 }

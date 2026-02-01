@@ -1,22 +1,25 @@
 import { Ionicons } from "@expo/vector-icons";
-import { useNavigation, useRouter } from "expo-router";
+import { useNavigation } from "@react-navigation/native";
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function DSCard() {
   const router = useRouter();
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   const [showTarget, setShowTarget] = useState(false);
 
-  const navigateToSchool = () => {
-      router.push({
-          pathname: "/schoolScreen",
-          params: { id: 123, title: "Quick Start Conduite" },
-      });
-  };
+  // const navigateToSchool = () => {
+  //   if (!router) return;
+  //   router.push({
+  //       pathname: "/screens/SchoolScreen",
+  //       params: { id: 123, title: "Quick Start Conduite" },
+  //   });
+  // };
+
   return (
     <View style={styles.card}>
-        <TouchableOpacity onPress={() => navigateToSchool()} activeOpacity={0.8}>
+        <TouchableOpacity onPress={() => navigation.navigate("SchoolScreen")} activeOpacity={0.8}>
             {/* Image / Gradient zone */}
             <View style={styles.imageContainer}>
                 <View style={styles.rating}>
@@ -61,7 +64,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: "#fff",
     borderRadius: 8,
-    marginHorizontal: 16,
+    marginHorizontal: 25,
     marginBottom: 20,
     overflow: "hidden",
     elevation: 1,

@@ -1,15 +1,13 @@
-import { Ionicons } from "@expo/vector-icons";
 import { Stack } from "expo-router";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { GradientTheme } from "../components/Utils";
-import SchoolTabs from "./SchoolTabs";
+import { ScrollView, StyleSheet } from "react-native";
+import AccountDetails from "../components/AccountDetails";
 
-export default function SchoolScreen() {
+export default function AccountScreen() {
   return (
     <ScrollView style={styles.container}>
       <Stack.Screen
         options={{
-          title: "Quick Start Conduite",
+          title: "Mon Compte",
           headerStyle: { backgroundColor: "#3B4BFF", },
           headerTintColor: "#fff",
           headerTitleStyle: { fontWeight: "700"},
@@ -17,36 +15,8 @@ export default function SchoolScreen() {
         }}
       />
 
-      {/* Image / Gradient zone */}
-      <GradientTheme>
-        <View style={styles.imageContainer}>
-          <Text style={styles.emoji}>🚗</Text>
-        </View>
-      </GradientTheme>
+      <AccountDetails />
 
-      {/* Content */}
-      <View style={styles.content}>
-        <View style={styles.rating}>
-          <Ionicons name="star" size={20} style={styles.ratingIcon} />
-          <Ionicons name="star" size={20} style={styles.ratingIcon} />
-          <Ionicons name="star" size={20} style={styles.ratingIcon} />
-          <Ionicons name="star" size={20} style={styles.ratingIcon} />
-          <Ionicons name="star" size={20} style={styles.ratingIconOff} />
-          <Text style={styles.ratingText}>4.6</Text>
-        </View>
-
-        <View style={styles.meta}>
-          <View style={styles.metaItem}>
-              <Ionicons name="location-outline" size={18} color="#3B4BFF" />
-              <Text style={styles.metaText}>Pikine</Text>
-          </View>
-        </View>
-
-        <View style={{ marginTop: 20, flex: 1, marginBottom: 20, height: 1600 }}>
-          <SchoolTabs />
-        </View>
-          
-      </View>
     </ScrollView>
   );
 }

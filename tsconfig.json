@@ -12,6 +12,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-, "app/(tabs)/explore.tsx.old"  ]
+    "expo-env.d.ts", "app/modal.tsx.old", "app/_layout.tsx.old", 
+    // "app/(tabs-old)/explore.tsx., "app/screens/SchoolScreen.tsx.old", "app/(tabs-old)/message.tsx.old", "app/(tabs-old)/index.tsx.old", "app/(tabs-old)/account.tsx.old", "app/(tabs-old)/_layout.tsx.old"old"  
+  ]
 }

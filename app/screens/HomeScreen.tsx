@@ -1,6 +1,7 @@
-import Header from '@/components/Header';
+
 import { StyleSheet, View } from 'react-native';
-import DynamicList from '../screens/DynamicList';
+import DynamicList from '../components/DynamicList';
+import Header from '../components/Header';
 
 export default function HomeScreen() {
   return (
@@ -28,4 +29,7 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
   },
+  textTitle: { 
+    fontSize: 24, fontWeight: '700', color: '#3B4BFF'
+  }
 });
